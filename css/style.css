@@ -78,7 +78,7 @@ ul li {
 }
 
 .header__logo_text {
-   color: #2400c5;
+   color: #00008b;
    text-transform: uppercase;
    font-size: 35px;
    font-weight: 700;
@@ -138,11 +138,11 @@ body._lock {
    transition: background-size 0.55s;
 }
 .menu__link:hover {
-   color: #2400c5;
+   color: #00008b;
    background-size: 100% 2px;
 }
 .linkactive {
-   color: #2400c5;
+   color: #00008b;
    font-weight: 700;
 }
 .linkactive:hover {
@@ -169,7 +169,7 @@ body._lock {
       height: 10%;
       width: 100%;
       transition: all 0.3s ease 0s;
-      background-color: #2400c5;
+      background-color: #00008b;
    }
 
    .menu__icon::before,
@@ -244,7 +244,7 @@ body._lock {
 
    .menu__link {
       font-size: 24px;
-      color: #2400c5;
+      color: #00008b;
       
    }
 }
