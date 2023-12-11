@@ -1,55 +1,43 @@
-"use strict"
+// toggle icon navbar
+let menuIcon = document.querySelector('#menu-icon');
+let navbar = document.querySelector('.navbar');
 
-const isMobile = {
-   Android: function () {
-      return navigator.userAgent.match(/Android/i);
-   },
-   BlackBerry: function () {
-      return navigator.userAgent.match(/BlackBerry/i);
-   },
-   iOS: function () {
-      return navigator.userAgent.match(/iPhone|iPad|iPod/i);
-   },
-   Opera: function () {
-      return navigator.userAgent.match(/Opera Mini/i);
-   },
-   Windows: function () {
-      return navigator.userAgent.match(/IEMobile/i);
-   },
-   any: function () {
-      return (
-         isMobile.Android() ||
-         isMobile.BlackBerry() ||
-         isMobile.iOS() ||
-         isMobile.Opera() ||
-         isMobile.Windows());
-   }
-};
-
-if (isMobile.any()) {
-   document.body.classList.add('_touch');
-
-   let menuArrows = document.querySelectorAll('.menu__arrow');
-   if (menuArrows.length > 0) {
-      for (let index = 0; index < menuArrows.length; index++) {
-         const menuArrow = menuArrows[index];
-         menuArrow.addEventListener("click", function (e) {
-            menuArrow.parentElement.classList.toggle('_active');
-         });
-      }
-   }
-
-} else {
-   document.body.classList.add('_pc');
+menuIcon.onclick = () => {
+   menuIcon.classList.toggle('bx-x');
+   navbar.classList.toggle('active');
 }
+//scroll sections
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+window.onscroll = () => {
+   sections.forEach(sec => {
+      let top = window.scrollY;
+      let offset = sec.offsetTop - 100;
+      let height = sec.offsetHeight;
+      let id = sec.getAttribute('id');
 
-// Меню бургер
-const iconMenu = document.querySelector('.menu__icon');
-const menuBody = document.querySelector('.menu__body');
-if (iconMenu) {
-   iconMenu.addEventListener("click", function (e) {
-      document.body.classList.toggle('_lock');
-      iconMenu.classList.toggle('_active');
-      menuBody.classList.toggle('_active');
+      if (top >= offset && top < offset + height) {
+         //active navbar links
+         navLinks.forEach(links => {
+            links.classList.remove('active');
+            document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+         });
+         //active sections for animation on scroll
+         sec.classList.add('show-animate');
+      }
+      //if want to use animation that repeats on scroll use this
+      else {
+         sec.classList.remove('show-animate');
+      }
    });
+   //sticky header
+   let header = document.querySelector('header');
+   header.classList.toggle('sticky', window.scrollY > 100);
+   //remove toggle icon and navbar when click navbar links (scroll)
+   menuIcon.classList.remove('bx-x');
+   navbar.classList.remove('active');
+   //animation footer on scroll
+   let footer = document.querySelector('footer');
+   footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
+
 }
