@@ -39,5 +39,21 @@ window.onscroll = () => {
    //animation footer on scroll
    let footer = document.querySelector('footer');
    footer.classList.toggle('show-animate', this.innerHeight + this.scrollY >= document.scrollingElement.scrollHeight);
+}
+// swiper service section
+"use strict"
 
+const servicesSwiper = document.querySelector('.swiper-services');
+
+if (servicesSwiper) {
+   const swiper = new Swiper('.swiper-services', {
+      // Optional parameters
+      autoHeight: true,
+      loop: true,
+      // If we need pagination
+      pagination: {
+         el: '.swiper-pagination',
+         clickable: true
+      },
+   });
 }
