@@ -496,7 +496,7 @@ span {
       top: 38px;
       left: -55px;
       transform: rotate(-8deg);
-      background-color: #FF6428;
+      background-color: var(--main-color);
       border-radius: 40px 0px 400px 400px;
 
    }
