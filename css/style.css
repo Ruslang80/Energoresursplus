@@ -29,7 +29,7 @@ body {
 }
 
 [class*="__container"] {
-   max-width: 1230px;
+   max-width: 1350px;
    margin: 0 auto;
    padding: 0px 15px;
 }
@@ -334,29 +334,30 @@ span {
 .services-content p {
    position: relative;
    font-size: 1.6rem;
-   margin: 2rem 0 3rem;
+   margin: 2rem 0 2rem;
 }
 /*-----------------slider services design---------------------*/
 
 .services__title {
-   margin-bottom: 100px;
+   margin-bottom: 0px;
 }
 
 .slide-swiper-services {
    display: flex;
+   flex-wrap: wrap;
 }
 
 .slide-swiper-services__picture {
    overflow: hidden;
-   flex: 0 1 50%;
+   flex: 0 1 30%;
    display: flex;
    justify-content: center;
    align-items: center;
 }
 
 .slide-swiper-services__image {
-   width: 320px;
-   height: 320px;
+   width: 300px;
+   height: 300px;
    position: relative;
 }
 
@@ -376,22 +377,26 @@ span {
    width: 285px;
    height: 257px;
    top: 38px;
-   left: -55px;
+   left: -25px;
    transform: rotate(-8deg);
    background-color: var(--main-color);
-   border-radius: 40px 0px 400px 400px;
+   border-radius: 40px 70px 400px 400px;
 
 }
 
 .slide-swiper-services__body {
-   flex: 0 1 50%;
+   flex: 0 1 70%;
+   padding: 0px 25px;
 }
 
 .slide-swiper-services__text {
    font-size: 24px;
    line-height: 1.6;
+   max-height: 90vw;
 }
-
+.swiper-slide {
+   max-width: 100vw;
+}
 .slide-swiper-services__text p:not(:last-child) {
    margin-bottom: 15px;
 }
@@ -410,14 +415,8 @@ span {
 .slide-swiper-services__name:not(:last-child) {
    margin-bottom: 8px;
 }
-
-.slide-swiper-services__position {
-   text-transform: uppercase;
-   font-weight: 500;
-   font-size: 18px;
-   line-height: 1.6;
-   letter-spacing: 0.08;
-   color: #868686;
+.swiper-services__wrapper {
+   margin-bottom: 30px;
 }
 
 .swiper-services__pagination {
@@ -442,16 +441,56 @@ span {
    height: 12px;
 }
 
-@media (max-width: 1230px) {
-   .services__swiper {
-      margin-left: -15px;
+@media (max-width: 1316px) {
+.services {
+   padding-top: 7rem;
+      
+   }
+   .slide-swiper-services {
+   flex-direction: column;
+   }
+   .slide-swiper-services__body {
+      padding-left: 20px;
+      padding-right: 20px;
+      flex: 0 1 70%;
+   }
+   .slide-swiper-services__image {
+      width: 240px;
+      height: 240px;
+   }
+   .slide-swiper-services__picture {
+      margin-bottom: 25px;
+      flex: 0 1 30%;
+   }
+   .slide-swiper-services__image::before {
+      content: "";
+      position: absolute;
+      width: 215px;
+      height: 207px;
+      top: 28px;
+      left: -15px;
+      transform: rotate(-8deg);
+      background-color: var(--main-color);
+      border-radius: 40px 70px 400px 400px;
+      }
+      [class*="__container"] {
+         max-width: 1250px;
+         margin: 0 auto;
+         padding: 0px 15px;
+      }
+}
+@media (max-width: 1250px) {
+
+   [class*="__container"] {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0px 15px;
    }
 }
-
 @media (max-width: 991.98px) {
 
    .services__title {
-      margin-bottom: 50px;
+      margin-bottom: 0px;
    }
 
    .slide-swiper-services__body {
@@ -471,34 +510,32 @@ span {
       bottom: 0;
       justify-content: center;
       transform: translate(0px, 0px);
-      padding-top: 35px;
    }
+      [class*="__container"] {
+         max-width: 780px;
+         margin: 0 auto;
+         padding: 0px 15px;
+      }
 }
 
 @media (max-width: 767.98px) {
+         [class*="__container"] {
+               max-width: 500px;
+               margin: 0 auto;
+               padding: 0px 15px;
+            }
 
    .services__title {
-      margin-bottom: 30px;
+      margin-bottom: 0px;
    }
 }
 
 @media (max-width: 479.98px) {
-   .slide-swiper-services__image {
-      width: 270px;
-      height: 270px;
-   }
 
-   .slide-swiper-services__image::before {
-      content: "";
-      position: absolute;
-      width: 225px;
-      height: 187px;
-      top: 38px;
-      left: -55px;
-      transform: rotate(-8deg);
-      background-color: var(--main-color);
-      border-radius: 40px 0px 400px 400px;
-
+   [class*="__container"] {
+      max-width: 350px;
+      margin: 0 auto;
+      padding: 0px 15px;
    }
 
    .slide-swiper-services__text {
