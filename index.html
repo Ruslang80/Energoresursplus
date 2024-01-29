@@ -9,6 +9,7 @@
    <link rel="shortcut icon" href="img/Logo_WM_color_min.ico">
    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
    <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/twentytwenty.css">
    <!--Box icons-->
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
@@ -236,13 +237,28 @@
    <!-- projects section design -->
    <section class="projects show-animate" id="projects">
       <h2 class="heading">Our <span>Projects</span><span class="animate scroll" style="--i:1;"></span></h2>
-      <div class="contacts-content">
-         <h3>Multi-nettoyage<span class="animate scroll" style="--i:3;"></span></h3>
-         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus quasi quod officiis accusantium quae,
-            velit tempore asperiores dignissimos, adipisci sit, in odio non deserunt explicabo aliquid corrupti? Ex,
-            repellat. Unde!
-            <span class="animate scroll" style="--i:4;"></span>
-         </p>
+      <div class="projects-content">
+         <div class="projects__item">
+            <h3>Sièges de voiture<span class="animate scroll" style="--i:3;"></span></h3>
+            <div class="twentytwenty-container">
+               <img src="img/before-after/1/before1.jpg" alt="Before">
+               <img src="img/before-after/1/after1.jpg" alt="After">
+            </div>
+         </div>
+         <!--<div class="projects__item">
+            <h3>Sièges de voiture 2<span class="animate scroll" style="--i:3;"></span></h3>
+            <div class="twentytwenty-container">
+               <img src="img/before-after/2/before2.jpg" alt="Before">
+               <img src="img/before-after/2/after2.jpg" alt="After">
+            </div>
+         </div>
+         <div class="projects__item">
+            <h3>Tapis<span class="animate scroll" style="--i:3;"></span></h3>
+            <div class="twentytwenty-container">
+               <img src="img/before-after/3/before3.png" alt="Before">
+               <img src="img/before-after/3/after3.png" alt="After">
+            </div>
+         </div>-->
       </div>
    </section>
    <!-- team section design -->
@@ -292,12 +308,20 @@
       <div class="popup__body">
          <div class="popup__content">
             <a href="#services" class="popup__close">x</a>
-            <div class="popup__image"><img src="img/Price1.png" alt="Price Wash Me Paris"></div>
+            <div class="popup__image"><img src="img/Price1.gif" alt="Price Wash Me Paris"></div>
          </div>
       </div>
    </div>
-   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-   <script src="js/script.js"></script>
+   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js" type="text/javascript"></script>
+   <script src="js/script.js" type="text/javascript"></script>
+   <script src="https://code.jquery.com/jquery-3.2.1.js" type="text/javascript"></script>
+   <script src="js/jquery.event.move.js" type="text/javascript"></script>
+   <script src="js/jquery.twentytwenty.js" type="text/javascript"></script>
+   <script>
+      $(document).ready(function () {
+         $(".twentytwenty-container").twentytwenty();
+      });
+   </script>
 </body>
 
 </html>
