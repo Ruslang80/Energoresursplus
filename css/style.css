@@ -718,6 +718,9 @@ span {
 }
 .projects-content {
    text-align: center;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 
 .projects-content h3 {
@@ -730,6 +733,29 @@ span {
    position: relative;
    font-size: 1.6rem;
    margin: 2rem 0 3rem;
+}
+.projects__item {
+   padding: 15px;
+   justify-content: space-between;
+  
+}
+.projects__item h3 {
+   align-items: center;
+}
+.twentytwenty-container {
+   width: 250px;
+   height: 420px;
+   position: relative;
+}
+.container-twentytwenty3 {
+   height: 420px;
+   width: 478px;
+}
+.twentytwenty-container img {
+   border-radius: 15px;
+   position: absolute;
+   width: 100%;
+   height: 100%;
 }
 
 /*===============*team section design=========================*/
