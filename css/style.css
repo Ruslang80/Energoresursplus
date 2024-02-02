@@ -757,6 +757,18 @@ span {
    width: 100%;
    height: 100%;
 }
+@media (max-width: 508.98px) {
+   .container-twentytwenty3 {
+      height: 353px;
+      width: 400px;
+   }
+}
+@media (max-width: 430.98px) {
+   .container-twentytwenty3 {
+      height: 283px;
+      width: 320px;
+   }
+}
 
 /*===============*team section design=========================*/
 .team {
