@@ -398,6 +398,10 @@ span {
    font-size: 24px;
    line-height: 1.6;
 }
+.slide-swiper-services__text p a {
+   color: var(--main-color);
+   font-weight: 600;
+}
 .swiper-slide {
    max-width: 100vw;
 }
