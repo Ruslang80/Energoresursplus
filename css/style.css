@@ -51,7 +51,7 @@ body {
 
 .header__logo {
    position: relative;
-   width: 10rem%;
+   width: 10rem;
    height: 10rem;
    border-radius: 50%;
    display: flex;
@@ -97,7 +97,7 @@ body {
 /*===============*home section design=========================*/
 section {
    min-height: 100vh;
-   padding: 10rem 9% 2rem;
+   padding: 10rem 9% 0rem;
 }
 
 .home {
@@ -723,8 +723,10 @@ span {
 .projects-content {
    text-align: center;
    display: flex;
-   flex-wrap: wrap;
    justify-content: center;
+   flex-wrap: wrap;
+   width: 80vw;
+
 }
 
 .projects-content h3 {
@@ -740,26 +742,56 @@ span {
 }
 .projects__item {
    padding: 15px;
-   justify-content: space-between;
-  
 }
 .projects__item h3 {
    align-items: center;
 }
 .twentytwenty-container {
-   width: 250px;
-   height: 420px;
-   position: relative;
+   width: 250px!important; 
+   height: 420px!important; 
 }
 .container-twentytwenty3 {
    height: 420px;
-   width: 478px;
+   width: 478px!important;
 }
 .twentytwenty-container img {
    border-radius: 15px;
    position: absolute;
    width: 100%;
    height: 100%;
+}
+.spoiler-btn {
+   position: relative;
+   cursor: pointer;
+}
+.spoiler-btn::before, 
+.spoiler-btn::after {
+content: '';
+width: 10px;
+height: 3px;
+background-color: var(--bg-color);
+position: absolute;
+top: 50%;
+z-index: 150;
+transition: all 0.3s ease 0s;
+} 
+
+.spoiler-btn::before {
+   transform: rotate(40deg);
+   right: 17px;
+}
+.spoiler-btn.active::before {
+   transform: rotate(-40deg);
+}
+.spoiler-btn::after {
+   transform: rotate(-40deg);
+   right: 10px;
+}
+.spoiler-btn.active::after {
+   transform: rotate(40deg);
+}
+.block-spoiler {
+   display: none;
 }
 @media (max-width: 508.98px) {
    .container-twentytwenty3 {
