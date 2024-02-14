@@ -79,6 +79,7 @@
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   z-index: 0;
+border-radius: 15px;
   overflow: hidden;
   position: relative;
   -webkit-user-select: none;
@@ -88,9 +89,11 @@
     max-width: 100%;
     position: absolute;
     top: 0;
-    display: block; }
+    display: block; 
+}
   .twentytwenty-container.active .twentytwenty-overlay, .twentytwenty-container.active :hover.twentytwenty-overlay {
-    background: rgba(0, 0, 0, 0); }
+    background: rgba(0, 0, 0, 0); 
+    }
     .twentytwenty-container.active .twentytwenty-overlay .twentytwenty-before-label,
     .twentytwenty-container.active .twentytwenty-overlay .twentytwenty-after-label, .twentytwenty-container.active :hover.twentytwenty-overlay .twentytwenty-before-label,
     .twentytwenty-container.active :hover.twentytwenty-overlay .twentytwenty-after-label {
