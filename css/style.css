@@ -822,11 +822,14 @@ span {
 }
 .twentytwenty-container {
    width: 250px; 
-   height: 420px!important; 
+   height: 420px; 
 }
-.container-twentytwenty3 {
-   height: 420px;
-   width: 478px!important;
+.container-twentytwenty3, .container-twentytwenty4 {
+   height: 420px!important;
+   width: 478px;
+}
+.container-twentytwenty4 .twentytwenty-handle {
+   display: none;
 }
 .twentytwenty-container img {
    border-radius: 15px;
@@ -870,13 +873,13 @@ transition: all 0.3s ease 0s;
 @media (max-width: 508.98px) {
    .container-twentytwenty3 {
       height: 353px;
-      width: 400px!important;
+      width: 400px;
    }
 }
 @media (max-width: 430.98px) {
    .container-twentytwenty3 {
       height: 283px;
-      width: 320px!important;
+      width: 320px;
    }
 }
 
@@ -947,11 +950,12 @@ transition: all 0.3s ease 0s;
 }
 
 .contacts-sci {
-   position: absolute;
-   bottom: 4rem;
+   margin: 20rem auto;
    width: 280px;
    display: flex;
    justify-content: space-between;
+   text-align: center;
+   align-items: center;
 }
 
 .contacts-sci a {
